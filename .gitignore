@@ -1,0 +1,6 @@
+deps/
+alire/
+alire.lock
+build/
+obj/
+config/
