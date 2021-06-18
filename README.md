@@ -26,12 +26,12 @@ Install the following and add to path
 
 Alire is an Ada package manager/library, akin to pip for python.
 
-Run the `build.sh` script will also get dependencies not managed by Alire and link them with Alire. These will be stored in the `deps` directory.
+Running the `build.sh` script will also get dependencies not managed by Alire and link them with Alire. These will be stored in the `deps` directory.
 
 It is sensible to pull the repos cloned into the `deps` every now and again, as they are in continuous development.
 
 ### elf2uf2
-To generate .uf2 firmware files, you need to have a copy of the efl2uf2 tool from the pico-sdk in your PATH.
+To generate .uf2 firmware files, you need to have a copy of the elf2uf2 tool from the pico-sdk in your PATH.
 
 Make sure you have CMake, Make and Native gcc and g++ compilers. For more information, see section 2 of the [pico-sdk getting started guide](https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf)
 
@@ -79,7 +79,7 @@ The `main` elf2 file can then either:
 2. Ensure the pico is mounted to the correct directory (as specified in the `flash.sh` script)
 3. Run `source ./flash.sh <project_name>`
 
-This will convert the ef2 file to uf2, and copy it to the mounted pico. The pico should unmount itself and start running your firmware automatically!
+This will convert the elf2 file to uf2, and copy it to the mounted pico. The pico should unmount itself and start running your firmware automatically!
 
 #### `flash.sh` Modifications
 In flash.sh, the target path of the copy command needs to be the location of the Raspberry Pi Pico when mounted in bootloader mode, and you will need to modify the file appropriately. Alternatively, you can forego this script altogether and run the `elf2uf2` tool on the `main` executable, and copy the file manually to the Pico "Drive".
