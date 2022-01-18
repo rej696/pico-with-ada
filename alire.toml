@@ -9,4 +9,5 @@ project-files = [
     "projects/blink/blink.gpr"]
 
 [[depends-on]]
-pico_bsp = "~0.3"
+pico_bsp = "^1.1.0"
+gnat_arm_elf = "*"
